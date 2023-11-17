@@ -1,0 +1,18 @@
+/* Make images easier to work with */
+img {
+	height: auto;
+
+	&[src$='.svg'] {
+		max-width: none;
+		box-sizing: content-box;
+	}
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	cursor: pointer;
+	font: inherit;
+}

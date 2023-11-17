@@ -1,0 +1,21 @@
+.container {
+	--page-wrapper__flex-direction: row;
+	gap: 2rem;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	> div {
+		flex: 0 1 clamp(100px, 30%, 40rem);
+	}
+}
+
+.toggle {
+	position: fixed;
+	top: 8px;
+	right: 8px;
+	border: 2px solid #000000;
+	border-radius: 4px;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	background: #ffffff;
+}

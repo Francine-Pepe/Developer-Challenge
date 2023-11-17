@@ -1,0 +1,20 @@
+.container {
+	background-color: hsl(0, 0%, 90%);
+}
+
+.toggle {
+	position: fixed;
+	top: 8px;
+	right: 8px;
+	border: 2px solid #000000;
+	border-radius: 4px;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	background: #ffffff;
+}
+
+.solution {
+	width: 46rem;
+	max-width: 100%;
+	align-self: center;
+}

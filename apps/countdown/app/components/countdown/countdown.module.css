@@ -1,0 +1,72 @@
+.container {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 1.8rem 3.8rem;
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	width: 46rem;
+	min-width: min-content;
+	max-width: 100%;
+	align-self: center;
+}
+
+.header {
+	display: flex;
+	align-self: stretch;
+	place-items: center;
+	gap: 1rem;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		flex: 1;
+		height: 1px;
+		background: currentColor;
+	}
+}
+
+.countdown {
+	display: grid;
+	place-content: center;
+	place-items: center;
+	column-gap: 0.8rem;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+	&--value {
+		grid-row: 1;
+	}
+
+	&--label {
+		grid-row: 2;
+	}
+}
+
+.hours--label {
+	grid-column: 3;
+}
+
+.minutes--label {
+	grid-column: 5;
+}
+
+.seconds--label {
+	grid-column: 7;
+}
+
+.divider {
+	grid-row: 1;
+	opacity: 0.3;
+}
+
+.spacer {
+	width: 1px;
+	height: 0.8em;
+	background-color: currentColor;
+	display: block;
+}

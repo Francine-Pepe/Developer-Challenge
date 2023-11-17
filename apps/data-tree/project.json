@@ -1,0 +1,40 @@
+{
+	"name": "data-tree",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "apps/data-tree",
+	"projectType": "application",
+	"targets": {
+		"build": {
+			"executor": "@nx/next:build",
+			"outputs": ["{options.outputPath}"],
+			"defaultConfiguration": "production",
+			"options": {
+				"outputPath": "dist/apps/data-tree"
+			},
+			"configurations": {
+				"development": {},
+				"production": {}
+			}
+		},
+		"serve": {
+			"executor": "@nx/next:server",
+			"defaultConfiguration": "development",
+			"options": {
+				"buildTarget": "data-tree:build",
+				"dev": true,
+				"port": 3001
+			},
+			"configurations": {
+				"development": {
+					"buildTarget": "data-tree:build:development",
+					"dev": true
+				},
+				"production": {
+					"buildTarget": "data-tree:build:production",
+					"dev": false
+				}
+			}
+		}
+	},
+	"tags": []
+}

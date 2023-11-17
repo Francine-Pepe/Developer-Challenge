@@ -1,0 +1,8 @@
+.container {
+	flex-direction: var(--page-wrapper__flex-direction, column);
+	position: relative;
+	padding: 1rem;
+	min-height: 100vh;
+	min-height: 100dvh;
+	display: flex;
+}

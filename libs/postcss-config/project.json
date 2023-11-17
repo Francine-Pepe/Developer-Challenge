@@ -1,0 +1,8 @@
+{
+  "name": "postcss-config",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/postcss-config",
+  "projectType": "library",
+  "tags": [],
+  "targets": {}
+}

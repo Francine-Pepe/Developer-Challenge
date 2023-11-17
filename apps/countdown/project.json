@@ -1,0 +1,40 @@
+{
+	"name": "countdown",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "apps/countdown",
+	"projectType": "application",
+	"targets": {
+		"build": {
+			"executor": "@nx/next:build",
+			"outputs": ["{options.outputPath}"],
+			"defaultConfiguration": "production",
+			"options": {
+				"outputPath": "dist/apps/countdown"
+			},
+			"configurations": {
+				"development": {},
+				"production": {}
+			}
+		},
+		"serve": {
+			"executor": "@nx/next:server",
+			"defaultConfiguration": "development",
+			"options": {
+				"buildTarget": "countdown:build",
+				"dev": true,
+				"port": 3000
+			},
+			"configurations": {
+				"development": {
+					"buildTarget": "countdown:build:development",
+					"dev": true
+				},
+				"production": {
+					"buildTarget": "countdown:build:production",
+					"dev": false
+				}
+			}
+		}
+	},
+	"tags": []
+}
