@@ -1,14 +1,15 @@
-.container {
+.container{
 	background-color: #000000;
 	color: #ffffff;
-	padding: 1.8rem 3.8rem;
+	padding: 1.55rem 3.8rem;
 	position: relative;
 	overflow: hidden;
 	isolation: isolate;
-	width: 46rem;
 	min-width: min-content;
 	max-width: 100%;
 	align-self: center;
+	width: 44rem;
+	border-radius: 15rem;
 }
 
 .header {
@@ -16,6 +17,8 @@
 	align-self: stretch;
 	place-items: center;
 	gap: 1rem;
+	text-transform: uppercase;
+	color: #606060cc;
 
 	&::before,
 	&::after {
@@ -45,6 +48,8 @@
 	&--label {
 		grid-row: 2;
 	}
+
+		
 }
 
 .hours--label {
@@ -62,6 +67,10 @@
 .divider {
 	grid-row: 1;
 	opacity: 0.3;
+}
+
+.days--label, .hours--label, .minutes--label, .seconds--label {
+	text-transform: uppercase;
 }
 
 .spacer {
