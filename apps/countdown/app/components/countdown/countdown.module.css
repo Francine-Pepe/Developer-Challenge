@@ -1,14 +1,14 @@
 .container{
 	background-color: #000000;
 	color: #ffffff;
-	padding: 1.55rem 3.8rem;
+	padding: 1rem 1.3rem;
 	position: relative;
 	overflow: hidden;
 	isolation: isolate;
 	min-width: min-content;
 	max-width: 100%;
 	align-self: center;
-	width: 44rem;
+	width: 40rem;
 	border-radius: 15rem;
 }
 
@@ -48,8 +48,6 @@
 	&--label {
 		grid-row: 2;
 	}
-
-		
 }
 
 .hours--label {
@@ -78,4 +76,11 @@
 	height: 0.8em;
 	background-color: currentColor;
 	display: block;
+}
+
+.countdown_inside_container {
+	width: inherit;
+	border: 0.1rem solid #ffffff;
+	border-radius: 14rem;
+	padding: 1rem 3rem;
 }
