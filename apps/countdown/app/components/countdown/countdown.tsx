@@ -83,7 +83,7 @@ export const Countdown: FC<TCountdownProps> = ({ className, date }) => {
 				opacity: duration ? 1 : 0,
 			}}
 		>
-			<div className={clsx(styles.countdown_inside_container)} >
+			<motion.div className={clsx(styles.countdown_inside_container)} >
 				<AnimatedText className={clsx(styles.header)} fontSize={SMALL_FONT_SIZE}>
 					remaining
 				</AnimatedText>
@@ -130,7 +130,7 @@ export const Countdown: FC<TCountdownProps> = ({ className, date }) => {
 					</AnimatedText>
 					
 				</motion.div>
-			</div>
+			</motion.div>
 		</motion.div>
 	)
 }
