@@ -8,8 +8,9 @@
 	min-width: min-content;
 	max-width: 100%;
 	align-self: center;
-	width: 40rem;
+	width: 41.3rem;
 	border-radius: 15rem;
+	opacity: rgba(0, 0, 0, 0.7);
 }
 
 .header {
@@ -83,4 +84,5 @@
 	border: 0.1rem solid #ffffff;
 	border-radius: 14rem;
 	padding: 1rem 3rem;
+	
 }
