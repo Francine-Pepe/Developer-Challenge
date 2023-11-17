@@ -83,51 +83,54 @@ export const Countdown: FC<TCountdownProps> = ({ className, date }) => {
 				opacity: duration ? 1 : 0,
 			}}
 		>
-			<AnimatedText className={clsx(styles.header)} fontSize={SMALL_FONT_SIZE}>
-				remaining
-			</AnimatedText>
-
-			<motion.div className={clsx(styles.countdown)}>
-				<AnimatedText className={styles['days--value']} fontSize={LARGE_FONT_SIZE}>
-					{duration?.days || 0}
-				</AnimatedText>
-				<AnimatedText className={clsx(styles['days--label'])} fontSize={SMALL_FONT_SIZE}>
-					Days
+			<div className={clsx(styles.countdown_inside_container)} >
+				<AnimatedText className={clsx(styles.header)} fontSize={SMALL_FONT_SIZE}>
+					remaining
 				</AnimatedText>
 
-				<AnimatedText className={styles.divider} fontSize={LARGE_FONT_SIZE}>
-					<span className={styles.spacer} />
-				</AnimatedText>
+				<motion.div className={clsx(styles.countdown)}>
+					<AnimatedText className={styles['days--value']} fontSize={LARGE_FONT_SIZE}>
+						{duration?.days || 0}
+					</AnimatedText>
+					<AnimatedText className={clsx(styles['days--label'])} fontSize={SMALL_FONT_SIZE}>
+						Days
+					</AnimatedText>
 
-				<AnimatedText className={styles['hours--value']} fontSize={LARGE_FONT_SIZE}>
-					{String(duration?.hours || 0).padStart(2, '0')}
-				</AnimatedText>
-				<AnimatedText className={clsx(styles['hours--label'])} fontSize={SMALL_FONT_SIZE}>
-					Hours
-				</AnimatedText>
+					<AnimatedText className={styles.divider} fontSize={LARGE_FONT_SIZE}>
+						<span className={styles.spacer} />
+					</AnimatedText>
 
-				<AnimatedText className={styles.divider} fontSize={LARGE_FONT_SIZE}>
-					:
-				</AnimatedText>
+					<AnimatedText className={styles['hours--value']} fontSize={LARGE_FONT_SIZE}>
+						{String(duration?.hours || 0).padStart(2, '0')}
+					</AnimatedText>
+					<AnimatedText className={clsx(styles['hours--label'])} fontSize={SMALL_FONT_SIZE}>
+						Hours
+					</AnimatedText>
 
-				<AnimatedText className={styles['minutes--value']} fontSize={LARGE_FONT_SIZE}>
-					{String(duration?.minutes || 0).padStart(2, '0')}
-				</AnimatedText>
-				<AnimatedText className={clsx(styles['minutes--label'])} fontSize={SMALL_FONT_SIZE}>
-					Minutes
-				</AnimatedText>
+					<AnimatedText className={styles.divider} fontSize={LARGE_FONT_SIZE}>
+						:
+					</AnimatedText>
 
-				<AnimatedText className={styles.divider} fontSize={LARGE_FONT_SIZE}>
-					:
-				</AnimatedText>
+					<AnimatedText className={styles['minutes--value']} fontSize={LARGE_FONT_SIZE}>
+						{String(duration?.minutes || 0).padStart(2, '0')}
+					</AnimatedText>
+					<AnimatedText className={clsx(styles['minutes--label'])} fontSize={SMALL_FONT_SIZE}>
+						Minutes
+					</AnimatedText>
 
-				<AnimatedText className={styles['seconds--value']} fontSize={LARGE_FONT_SIZE}>
-					{String(duration?.seconds || 0).padStart(2, '0')}
-				</AnimatedText>
-				<AnimatedText className={clsx(styles['seconds--label'])} fontSize={SMALL_FONT_SIZE}>
-					Seconds
-				</AnimatedText>
-			</motion.div>
+					<AnimatedText className={styles.divider} fontSize={LARGE_FONT_SIZE}>
+						:
+					</AnimatedText>
+
+					<AnimatedText className={styles['seconds--value']} fontSize={LARGE_FONT_SIZE}>
+						{String(duration?.seconds || 0).padStart(2, '0')}
+					</AnimatedText>
+					<AnimatedText className={clsx(styles['seconds--label'])} fontSize={SMALL_FONT_SIZE}>
+						Seconds
+					</AnimatedText>
+					
+				</motion.div>
+			</div>
 		</motion.div>
 	)
 }
