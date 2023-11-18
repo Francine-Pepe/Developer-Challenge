@@ -37,5 +37,24 @@ export default function Page({ searchParams }: { searchParams: { [key: string]: 
 }
 
 const mapTreeData = (data: TDataTree = []): TDataTree => {
-	return data
+	const dataTree = {}
+	const root: any[] = [] //multidimensional array
+
+	data.forEach((item) => {
+		dataTree[item.id] = {
+			...item,
+			children: [],
+		}
+	})
+
+	data.forEach(function (item) {
+		const parent = dataTree[item.parent]
+		if (parent) {
+			parent.children.push(dataTree[item.id])
+		} else {
+			root.push(dataTree[item.id])
+		}
+	})
+
+	return root
 }
